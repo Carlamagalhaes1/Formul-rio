@@ -1,3 +1,5 @@
+import {User} from '../types/user'
+
 const Form = () => {
     return (
         <form className="flex flex-col gap-3">
