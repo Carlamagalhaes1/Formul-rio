@@ -62,10 +62,11 @@ const Form = () => {
                 <a href="#" className="text-xs underline mb-2">Leia os termos</a>
                 <div className="flex gap-2 items-center">
                 <input type="checkbox" checked={agree} onChange={(e) => setAgree(e.target.checked)} />
-                {erros?.agree && (<small className='text-xs text-red-600 mt-1'>{erros?.agree}</small>) }
+                
                 <label className="text-sm" htmlFor="agree">Concordo com os termos</label>
 
                 </div>
+                {erros?.agree && (<small className='text-xs text-red-600 mt-1'>{erros?.agree}</small>) }
                
             </div>
             <button type="submit" className="bg-slate-600 hover:bg-slate-500 font-medium text-sm py-2 px-4 rounded-lg text-white">Cadastrar</button>
