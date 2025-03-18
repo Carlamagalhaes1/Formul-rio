@@ -56,11 +56,13 @@ const Form = () => {
             <div className="flex flex-col">
                 <label className="text-sm" htmlFor="email" >Email:</label>
                 <input type="email" placeholder="Digite seu email"  className="rounded-lg py-2 px-2 text-sm placeholder:text-stone-400 border-1 mt-1" value={email} onChange={(e) => setEmail(e.target.value)}/>
+                {erros?.email && (<small className='text-xs text-red-600 mt-1'>{erros?.email}</small>) }
             </div>
             <div className="flex flex-col">
                 <a href="#" className="text-xs underline mb-2">Leia os termos</a>
                 <div className="flex gap-2 items-center">
                 <input type="checkbox" checked={agree} onChange={(e) => setAgree(e.target.checked)} />
+                {erros?.agree && (<small className='text-xs text-red-600 mt-1'>{erros?.agree}</small>) }
                 <label className="text-sm" htmlFor="agree">Concordo com os termos</label>
 
                 </div>
