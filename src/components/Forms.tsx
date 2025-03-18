@@ -14,6 +14,8 @@ const Form = () => {
     const handleSubmit = (e:FormEvent) => {
         e.preventDefault();
 
+        setErros(null);
+
         const data: User = {
             name,
             email,
@@ -29,6 +31,11 @@ const Form = () => {
                 return;
 
             }
+
+            setName('')
+            setEmail('')
+            setAgree(false)
+
 
             alert('obrigado por se inscrever!')
         
