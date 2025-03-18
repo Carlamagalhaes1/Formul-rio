@@ -25,7 +25,7 @@ const Form = () => {
         const validateErrors = validate(data);
 
             if(Object.keys(validateErrors).length > 0){
-                alert('Tem erros')
+                setErros(validateErrors)
                 return;
 
             }
@@ -45,6 +45,7 @@ const Form = () => {
                 <label className="text-sm" htmlFor="name" >Nome</label>
                 <input type="text" placeholder="Digite seu nome" className="rounded-lg py-2 px-2 text-sm placeholder:text-stone-400 border-1 mt-1" value={name} onChange={(e) => setName(e.target.value)}/>
             </div>
+            {erros?.name && (<small className='text-xs text-red-600 mt-1'>{erros?.name}</small>) }
             <div className="flex flex-col">
                 <label className="text-sm" htmlFor="email" >Email:</label>
                 <input type="email" placeholder="Digite seu email"  className="rounded-lg py-2 px-2 text-sm placeholder:text-stone-400 border-1 mt-1" value={email} onChange={(e) => setEmail(e.target.value)}/>
