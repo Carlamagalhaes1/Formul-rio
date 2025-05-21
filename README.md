@@ -1,6 +1,6 @@
-# React + TypeScript + Vite + Tailwind
+# FORMULÁRIO: React + TypeScript + Vite + Tailwind
 
-Este projeto é um template moderno e minimalista utilizando **React**, **TypeScript**, **Vite** e **Tailwind CSS**, com suporte a **Hot Module Replacement (HMR)** e uma configuração extensível de **ESLint** com regras específicas para projetos em produção.
+Este projeto é um template de formulário moderno e minimalista utilizando **React**, **TypeScript**, **Vite** e **Tailwind CSS**.
 
 ## 🚀 Tecnologias Utilizadas
 
