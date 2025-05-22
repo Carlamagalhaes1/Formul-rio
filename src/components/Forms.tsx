@@ -50,6 +50,7 @@ const Form = () => {
         <form className="flex flex-col gap-3" onSubmit={handleSubmit}>
             <div className="flex flex-col">
                 <label className="text-sm" htmlFor="name" >Nome</label>
+                
                 <input type="text" placeholder="Digite seu nome" className="rounded-lg py-2 px-2 text-sm placeholder:text-stone-400 border-1 mt-1" value={name} onChange={(e) => setName(e.target.value)}/>
             </div>
             {erros?.name && (<small className='text-xs text-red-600 mt-1'>{erros?.name}</small>) }
