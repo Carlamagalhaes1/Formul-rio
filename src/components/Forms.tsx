@@ -6,6 +6,7 @@ const Form = () => {
   const [name, setName] = useState('')
   const [email, setEmail] = useState('')
   const [agree, setAgree] = useState(false)
+  const [loading, setLoading] = useState(false)
 
   const [erros, setErros] = useState<User | null>(null)
 
@@ -13,6 +14,7 @@ const Form = () => {
     e.preventDefault()
 
     setErros(null)
+    setLoading(true)
 
     const data: User = {
       name,
@@ -24,6 +26,7 @@ const Form = () => {
 
     if (Object.keys(validateErrors).length > 0) {
       setErros(validateErrors)
+      setLoading(false)
       return
     }
 
@@ -33,10 +36,11 @@ const Form = () => {
     setName('')
     setEmail('')
     setAgree(false)
+    setLoading(false)
   }
 
   return (
-    
+
       <form
         onSubmit={handleSubmit}
         className="flex flex-col gap-3 p-6 bg-white rounded-lg shadow-md transition-all duration-500 ease-in-out"
@@ -100,9 +104,14 @@ const Form = () => {
 
         <button
           type="submit"
-          className="bg-slate-600 hover:bg-slate-500 hover:scale-105 transition-all duration-300 font-medium text-sm py-2 px-4 rounded-lg text-white"
+          disabled={loading}
+          className={`${
+            loading
+              ? 'bg-slate-400 cursor-not-allowed'
+              : 'bg-slate-600 hover:bg-slate-500'
+          } font-medium text-sm py-2 px-4 rounded-lg text-white transition-all duration-300`}
         >
-          Cadastrar
+          {loading ? 'Enviando...' : 'Cadastrar'}
         </button>
       </form>
    
