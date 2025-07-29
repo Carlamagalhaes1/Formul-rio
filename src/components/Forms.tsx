@@ -28,6 +28,7 @@ const Form = () => {
     }
 
     console.log('Dados enviados:', data)
+    alert('Cadastro realizado com sucesso!')
 
     setName('')
     setEmail('')
@@ -35,7 +36,7 @@ const Form = () => {
   }
 
   return (
-    <div className=" bg-gray-100  border-2items-center">
+    <div className="min-h-screen flex items-center justify-center bg-gray-100">
       <form className="flex flex-col gap-3" onSubmit={handleSubmit}>
         <div className="flex flex-col">
           <label className="text-sm" htmlFor="name">
