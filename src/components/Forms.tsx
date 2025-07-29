@@ -36,41 +36,48 @@ const Form = () => {
   }
 
   return (
-    <div className="min-h-screen flex items-center justify-center bg-gray-100">
-      <form className="flex flex-col gap-3" onSubmit={handleSubmit}>
-        <div className="flex flex-col">
+    
+      <form
+        onSubmit={handleSubmit}
+        className="flex flex-col gap-3 p-6 bg-white rounded-lg shadow-md transition-all duration-500 ease-in-out"
+      >
+        <div className="flex flex-col transition-all duration-300">
           <label className="text-sm" htmlFor="name">
             Nome:
           </label>
           <input
             type="text"
             placeholder="Digite seu nome"
-            className="rounded-lg py-2 px-2 text-sm placeholder:text-stone-400 border border-stone-300 mt-1"
+            className="rounded-lg py-2 px-2 text-sm placeholder:text-stone-400 border border-stone-300 mt-1 focus:ring-2 focus:ring-slate-400 transition-all duration-300"
             value={name}
             onChange={(e) => setName(e.target.value)}
           />
         </div>
         {erros?.name && (
-          <small className="text-xs text-red-600 mt-1">{erros.name}</small>
+          <small className="text-xs text-red-600 mt-1 transition-all duration-300">
+            {erros.name}
+          </small>
         )}
 
-        <div className="flex flex-col">
+        <div className="flex flex-col transition-all duration-300">
           <label className="text-sm" htmlFor="email">
             Email:
           </label>
           <input
             type="email"
             placeholder="Digite seu email"
-            className="rounded-lg py-2 px-2 text-sm placeholder:text-stone-400 border border-stone-300 mt-1"
+            className="rounded-lg py-2 px-2 text-sm placeholder:text-stone-400 border border-stone-300 mt-1 focus:ring-2 focus:ring-slate-400 transition-all duration-300"
             value={email}
             onChange={(e) => setEmail(e.target.value)}
           />
           {erros?.email && (
-            <small className="text-xs text-red-600 mt-1">{erros.email}</small>
+            <small className="text-xs text-red-600 mt-1 transition-all duration-300">
+              {erros.email}
+            </small>
           )}
         </div>
 
-        <div className="flex flex-col">
+        <div className="flex flex-col transition-all duration-300">
           <a href="#" className="text-xs underline mb-2">
             Leia os termos
           </a>
@@ -85,18 +92,20 @@ const Form = () => {
             </label>
           </div>
           {erros?.agree && (
-            <small className="text-xs text-red-600 mt-1">{erros.agree}</small>
+            <small className="text-xs text-red-600 mt-1 transition-all duration-300">
+              {erros.agree}
+            </small>
           )}
         </div>
 
         <button
           type="submit"
-          className="bg-slate-600 hover:bg-slate-500 font-medium text-sm py-2 px-4 rounded-lg text-white"
+          className="bg-slate-600 hover:bg-slate-500 hover:scale-105 transition-all duration-300 font-medium text-sm py-2 px-4 rounded-lg text-white"
         >
           Cadastrar
         </button>
       </form>
-    </div>
+   
   )
 }
 
