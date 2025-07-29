@@ -47,7 +47,8 @@ const Form = () => {
 
 
     return (
-        <form className="flex flex-col gap-3" onSubmit={handleSubmit}>
+        <div className=" items-center justify-center">
+             <form className="flex flex-col gap-3" onSubmit={handleSubmit}>
             <div className="flex flex-col">
                 <label className="text-sm" htmlFor="name" >Nome:</label>
                 
@@ -72,6 +73,9 @@ const Form = () => {
             </div>
             <button type="submit" className="bg-slate-600 hover:bg-slate-500 font-medium text-sm py-2 px-4 rounded-lg text-white">Cadastrar</button>
         </form>
+
+        </div>
+       
         
     )
 }
