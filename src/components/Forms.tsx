@@ -111,7 +111,7 @@ const Form = () => {
               : 'bg-slate-600 hover:bg-slate-500'
           } font-medium text-sm py-2 px-4 rounded-lg text-white transition-all duration-300`}
         >
-          {loading ? 'Enviando...' : 'Cadastrar'}
+          {loading ? 'Enviando....' : 'Cadastrar'}
         </button>
       </form>
    
