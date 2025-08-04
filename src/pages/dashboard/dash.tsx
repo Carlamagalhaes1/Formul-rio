@@ -1,4 +1,4 @@
-export default function name() {
+export default function Dash() {
     return (
         <div>
             oi
