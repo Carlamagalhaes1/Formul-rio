@@ -49,9 +49,7 @@ const Form = () => {
           <label className="text-sm" htmlFor="name">
             Nome:
           </label>
-          <label className="text-sm" htmlFor="name">
-            Sobrenome:
-          </label>
+          
           <input
             type="text"
             placeholder="Digite seu nome"
